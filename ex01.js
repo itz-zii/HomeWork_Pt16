@@ -1,6 +1,6 @@
 function tinhTienDien(kWh) {
-  let bac = [50, 50, 100, 100, 100]; // giới hạn bậc
-  let gia = [1678, 1734, 2014, 2536, 2834, 2927]; // giá từng bậc
+  let bac = [50, 50, 100, 100, 100];
+  let gia = [1678, 1734, 2014, 2536, 2834, 2927];
   let tongTien = 0;
 
   for (let i = 0; i < bac.length && kWh > 0; i++) {
@@ -8,7 +8,7 @@ function tinhTienDien(kWh) {
     tongTien += dung * gia[i];
     kWh -= dung;
   }
-  if (kWh > 0) tongTien += kWh * gia[5]; // bậc 6
+  if (kWh > 0) tongTien += kWh * gia[5];
   return tongTien;
 }
 
